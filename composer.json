@@ -10,8 +10,8 @@
         "php": ">=8.2",
         "api-platform/core": "^3.0|^2.7",
         "symfony/config": "^7.0",
-        "symfony/dependency-injection": "^6.1",
-        "symfony/expression-language": "^6.1"
+        "symfony/dependency-injection": "^7.0",
+        "symfony/expression-language": "^7.0"
     },
     "require-dev": {
         "composer/semver": "^3.3",
