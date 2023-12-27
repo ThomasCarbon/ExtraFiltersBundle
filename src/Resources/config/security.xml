@@ -2,7 +2,7 @@
 <container xmlns="http://symfony.com/schema/dic/services">
     <services>
         <service id="instacar.extra_filters.security_expression_value_provider" class="Instacar\ExtraFiltersBundle\Expression\SecurityExpressionValueProvider" public="false">
-            <argument key="$security" type="service" id="Symfony\Component\Security\Core\Security"/>
+            <argument key="$security" type="service" id="Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface"/>
             <tag name="instacar.extra_filters.expression_value_provider" />
         </service>
     </services>

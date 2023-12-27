@@ -2,16 +2,13 @@
 
 namespace Instacar\ExtraFiltersBundle\Expression;
 
-use Symfony\Bundle\SecurityBundle\Security;
-use Symfony\Component\Security\Core\Security as LegacySecurity;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+
 
 final class SecurityExpressionValueProvider implements ExpressionValueProviderInterface
 {
-    private Security|LegacySecurity $security;
-
-    public function __construct(Security|LegacySecurity $security)
+    public function __construct(private readonly TokenStorageInterface $security)
     {
-        $this->security = $security;
     }
 
     public function getValues(): array
